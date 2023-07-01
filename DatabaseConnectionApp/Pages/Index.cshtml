@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Display List of Product</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">PorductId</th>
+                <th scope="col">PorductName</th>
+                <th scope="col">Quantity</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var p in Model.products)
+            {
+                <tr>
+                    <th scope="row">@p.ProductId</th>
+                    <th scope="row">@p.ProductName</th>
+                    <th scope="row">@p.Quantity</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
